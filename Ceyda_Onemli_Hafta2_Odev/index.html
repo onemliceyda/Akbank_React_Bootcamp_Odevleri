@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product</title>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="root">
+      <div class="container">
+        <div class="first-row">
+          <div class="card user-container">
+            <label>
+              <div>Ad-Soyad</div>
+              <input id="userName" type="text" class="form-control" />
+            </label>
+            <label>
+              <div>Bakiye</div>
+              <input id="balance" type="number" class="form-control" />
+            </label>
+            <button
+              type="button"
+              id="addUser"
+              class="btn btn-primary"
+              onclick="addUser()"
+            >
+              Ekle
+            </button>
+          </div>
+          <div class="card middle-container">
+            <label>
+              <select
+                id="userSelect1"
+                class="form-select"
+                aria-label="Default select example"
+              >
+                
+                
+              </select>
+            </label>
+            <label>
+              <select
+              id="userSelect2"
+                class="form-select"
+                aria-label="Default select example"
+              >
+               
+              </select>
+            </label>
+
+            
+            <label>
+              <div>Miktar</div>
+              <input id="amount" type="text" class="form-control" />
+            </label>
+            <button type="button" id="trade" class="btn btn-primary" onclick="userMoneyTransfer()">
+              Takas Et
+            </button>
+          </div>
+
+          <div class="card product-container">
+            <label>
+              <div>Ürün Adı</div>
+              <input id="productName" type="text" class="form-control" />
+            </label>
+            <label>
+              <div>Fiyatı</div>
+              <input id="price" type="text" class="form-control" />
+            </label>
+            <label>
+              <div>Ürün Miktarı</div>
+              <input id="productAmount" type="text" class="form-control" />
+            </label>
+            <button
+              type="button"
+              id="addProduct"
+              class="btn btn-primary"
+              onclick="addProduct()"
+            >
+              Ekle
+            </button>
+          </div>
+        </div>
+        <div class="first-row">
+          <div class="second-row-card">
+            <div class="title">
+              <span class="name">Ad-Soyad</span>
+              <span class="balance">Bakiye</span>
+            </div>
+            <ul id="userList" class="list-group"></ul>
+          </div>
+          <div class="second-row-card">
+            <ul class="list-group">
+              <li class="list-group-item">An item</li>
+              <li class="list-group-item">A second item</li>
+              <li class="list-group-item">A third item</li>
+              <li class="list-group-item">A fourth item</li>
+              <li class="list-group-item">And a fifth one</li>
+            </ul>
+          </div>
+          <div class="second-row-card">
+            <div class="title">
+              <span class="name">Ürün adı</span>
+              <span class="balance">Ürün Fiyatı</span>
+              <span class="amount">Ürün Miktarı</span>
+            </div>
+            <ul id="productList" class="list-group"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
